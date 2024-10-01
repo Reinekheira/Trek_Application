@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel around the world with Trek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Protest+Riot&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Henny+Penny&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Protest+Riot&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+  <style>
+      body {
+        
+        /* Color layer */
+        background: linear-gradient(rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.242)),
+          url("/images/h2o.avif");
+        background-size: 2000px;
+        
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 700px;
+  box-sizing: border-box;
+}
+div > p{
+background-color: black;
+}
+      
+    a{
+        text-decoration: none;
+        color: rgb(222, 222, 193);
+       margin-left: 100px;
+       margin-top: 10px;
+
+    }
+    li{
+      margin-top: -10px;
+      position: relative;
+      
+    }
+   .navbar{
+    margin-left: -50px;
+    
+   }
+  
+   .navbar-toggler{
+    width: 80px;
+    height: 50px;
+    background-color:#d9dc96;
+    border: 2px #d9dc96;
+    margin-top: 20px;
+    
+
+   }
+    .navbar-nav{
+        margin-left: -10px;
+        margin-top: 3px;
+        font-size: 15px;
+        overflow: hidden;
+        background-color: #140e0e;
+        position: fixed;
+        width: 1265px;
+        z-index: 1000;
+        height: 70px;
+        padding-top: 10px;
+        
+        
+    }
+   
+ 
+  .navbar-nav a {
+    float:left;
+    display: block;
+    color: #faf8d0;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    margin-left: 100px;
+    
+  }
+  .navbar-nav a:hover {
+    background-color: #d9dc96;
+    color: black;
+    border-radius: 10px;
+    padding-top: 15px;
+  }
+   
+  
+   .container1{
+    margin-right: 700px;
+    width: 500px;
+   }
+  .toggbtn{
+    width: 50px;
+  }
+   .frst{
+    color: rgb(212, 212, 174);
+    margin-left: 40px;
+    font-size: 40px;
+    padding-right: 300px;
+    margin-top: 100px;
+   }
+   button{
+    margin-left: 900px;
+    margin-top: 100px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color:#000000;
+    outline: none; 
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  color:#d9dc96;
+   }
+ .container{
+  background-color: rgba(255, 255, 255, 0.635);
+  margin-top: 100px;
+  padding-top: 30px;
+  width: 100%;
+  padding-bottom: 20px;
+ 
+ }
+
+.paris{
+  margin-top: 30px;
+  margin-left: 0px;
+  width: 600px;
+  height: 600px;
+}
+
+.ctn-1{
+  background-color:#d9dc96;
+  padding:300px;
+
+  
+ 
+}
+
+.circle {
+      width: 200px; /* Adjust circle size */
+      height: 200px; /* Adjust circle size */
+      border-radius: 50%; /* Make it circular */
+      background-color: rgb(0, 0, 0); /* Circle background color */
+      position: absolute;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px; /* Adjust font size */
+      color:#d9dc96; /* Text color */
+    margin-left: 200px;
+    margin-top: -150px;
+    font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+
+    }
+    .par{
+   margin-left: -200px;
+   margin-top: -150px;
+   background-color: #000000;
+   color: #d9dc96;
+   margin-right: 500px;
+   padding: 40px;
+   border-radius: 30px
+    }
+    .circle1{
+      width: 200px; /* Adjust circle size */
+      height: 200px; /* Adjust circle size */
+      border-radius: 50%; /* Make it circular */
+      background-color: rgb(118, 93, 30); /* Circle background color */
+      position: absolute;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px; /* Adjust font size */
+      color:#d9dc96; /* Text color */
+    margin-left: 900px;
+    margin-top: -820px;
+    font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    }
+    .par1{
+      background-color: rgb(118, 93, 30);
+      margin-top: -540px;
+      padding: 40px;
+      border-radius: 20px;
+      color:#d9dc96;
+      margin-left: 800px;
+      margin-right: 100px;
+      font-size: 17px;
+      margin-bottom: 1000px;
+    }
+  .desc{
+    background-color:#d9dc96;
+    padding: 200px;
+    font-size: 20px;
+    color:#000000;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  svg{
+    width: 40px;
+    margin-left: -20px;
+    margin-top: 10px;
+  }
+  .book{
+    margin-top: -710px;
+    padding: 70px;
+    background-color: #9ea069;
+    padding-bottom: 300px;
+  }
+  .janeiro{
+    width:450px;
+    margin-left: 670px;
+    margin-top: -605px;
+  }
+.china{
+  width:600px;
+  margin-top: -170px;
+}
+.opt{
+  margin-top: -80px;
+  margin-left: 450px;
+  color: white;
+  font-size: 20px;
+}
+.opt1{
+  margin-left: 500px;
+  margin-top: -10px;
+  color: rgba(255, 255, 255, 0.685);
+}
+.afro{
+  margin-left: 800px;
+  margin-top: -100px;
+  background-color: #000000;
+  color: #d9dc96;
+  padding: 40px;
+}
+#un{
+  margin-top:100px;
+  margin-left:4px;
+  color:white;
+  background-color:#9b72276c;
+  padding: 20px;
+  border-radius:20px;
+  margin-right:830px;
+}
+#deux{
+  margin-left:420px;
+  margin-top:-239px;
+  color:white;
+  background-color:#9b72276c;
+  padding:20px;
+  border-radius:20px;
+  margin-right:410px;
+}
+#trois{
+  margin-left:800px;
+  margin-top:-239px;
+  color:white;
+  background-color:#9b72276c;
+  padding:20px;
+  border-radius:20px;
+}
+.opt{
+  margin-top: -80px;
+  margin-left: 450px;
+  color: white;
+  font-size: 20px;
+}
+.janeiro1{
+  margin-left: 770px;
+  color: white;
+  margin-top: -70px;
+  font-size: 20px;
+}
+.janeiro2{
+  margin-left: 800px;
+  margin-top: -20px;
+  color: rgba(255, 255, 255, 0.635);
+}
+.chine{
+  margin-left: 400px;
+  margin-top: -10px;
+  color: rgb(203, 212, 212);
+}
+.china1{
+  margin-top: -80px;
+  margin-left: 400px;
+  font-size: 20px;
+  color: white;
+}
+.carousel-control-prev{
+  margin-left: -5px;
+}
+ /* Small devices (phones) */
+ 
+b{
+  color: rgb(236, 232, 212);
+    font-size: 20px;
+  font-family: "Henny Penny", system-ui;
+  font-weight: 700;
+  font-style:normal;
+  margin-top: -25px;
+  margin-left: -50px;
+}
+ .btn{
+  background-color: #000000;
+  border: 2px black;
+  color: #d9dc96;
+  font-weight: 400;
+height: 90px;
+
+ }
+ .btn:hover{
+  background-color: #d9dc96;
+  color: #000000;
+  font-weight: 400;
+ }
+ .card{
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background-color: #9ea069;
+  color: #000000;
+ }
+@media only screen and (min-width:100px) and (max-width: 599px) {
+ 
+
+  .navbar-nav {
+    height: 280px;
+    margin-top: 30px;
+    width: 40%;
+}
+
+.navbar-nav a {
+  display: block;
+  color: #faf8d0;
+  text-align: center;
+  padding: 10px 50px;
+  text-decoration: none;
+  margin-left: -30px;
+}
+
+
+.frst{
+  font-size: 20px;
+  padding-right: 30px;
+  margin-top: 350px;
+}
+.add{
+  font-size: 15px;
+  padding-right: 100px;
+}
+button{
+  margin-left: 200px;
+  width: 150px;
+  height: 70px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.container{
+  margin-left: 300px;
+}
+.carousel-control-prev{
+ margin-top: 150px;
+}
+.carousel-control-next{
+  margin-top: 150px;
+}
+.btn{
+  margin-top: 10px;
+}
+.paris{
+  width: 400px;
+  height: 400px;
+  margin-left: -200px;
+  margin-top: -100px;
+
+  
+
+}
+.janeiro{
+  width: 550px;
+  margin-left: -190px;
+  margin-top: 50px;
+}
+.china{
+  width: 550px;
+  margin-left:-190px;
+  margin-top: 100px;
+}
+.container{
+  margin-left: 0px;
+  padding: 20px;
+  width: 590px;
+}
+.afro{
+font-size: 10px;
+margin-left: -10px;
+margin-top: 100px;
+text-align: center;
+padding: 50px;
+}
+.desc{
+  padding: 20px;
+  width: 600px;
+}
+#top{
+  font-size: 15px;
+  padding-left: 5px;
+  margin-top: 40px;
+  padding-right: 200px;
+
+}
+.circle{
+  margin-top: 40px;
+  width: 100px;
+  height: 100px;
+  font-size: 16px;
+  margin-left: 200px;
+}
+.par{
+  font-size: 15px;
+
+margin-left: -250px;
+margin-bottom: 1000px;
+margin-top: -40px;
+width: 300px;
+padding: 30px;
+}
+.circle1{
+  margin-left: -100px;
+  margin-top: -800px;
+  width: 100px;
+  height: 100px;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: -300px;
+}
+.par1{
+  margin-left: -250px;
+  margin-top: -600px;
+  padding: 20px;
+  margin-right: -50px;
+  width: 300px;
+  font-size: 15px;
+}
+.prt{
+  margin-right: -500px;
+  margin-top: 100px;
+  width: 20%;
+}
+.book{
+  width: 600px;
+}
+#un{
+  margin-right: -100px;
+  margin-left: -30px;
+  padding-left: 70px;
+  font-size: 15px;
+  width: 300px;
+  
+}
+#deux{
+  margin-top: 40px;
+  margin-left: -30px;
+  margin-right: 40px;
+  padding-left: 70px;
+  font-size: 15px;
+  width: 300px;
+}
+#trois{
+  margin-top: 100px;
+  margin-left: -30px;
+  margin-right: 40px;
+  padding-left: 70px;
+  font-size: 15px;
+  width: 300px;
+}
+svg{
+  margin-bottom: 50px;
+}
+.prt{
+ margin-right: 1000px;
+}
+.opt{
+  margin-left: 300px;
+  font-size: 15px;
+}
+.opt1{
+  margin-left: 350px;
+  color: rgba(255, 255, 255, 0.447);
+  font-size: 10px;
+  
+}
+.janeiro1{
+  margin-top: -100px;
+  margin-left: 200px;
+  font-size: 15px;
+}
+.janeiro2{
+  margin-left: 230px;
+  color: #ffffff;
+  font-size: 10px;
+}
+.china1{
+  margin-left: 350px;
+  font-size: 15px;
+}
+.chine{
+  font-size: 10px;
+  margin-left: 430px;
+}
+}
+
+/* Medium devices (tablets, small laptops) */
+@media only screen and (min-width: 600px) and (max-width: 1090px) {
+  /* CSS styles for medium devices */
+  .navbar-nav {
+    height: 450px;
+    margin-top: 30px;
+    width: 30%;
+    font-size: 25px;
+}
+
+.navbar-nav a {
+  display: block;
+  color: #dfddb7;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+  margin-left: -30px;
+}
+
+
+.frst{
+  font-size: 40px;
+  padding-right: 30px;
+  margin-top: 500px;
+}
+.add{
+  font-size: 25px;
+  padding-right: 100px;
+}
+button{
+ 
+  margin-left: 500px;
+  width: 300px;
+  height: 100px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.carousel-control-prev{
+ margin-top: 150px;
+}
+.carousel-control-next{
+  margin-top: 150px;
+}
+.btn{
+  margin-top: 10px;
+}
+.paris{
+  width: 1000px;
+  height: 1000px;
+  margin-left: -200px;
+  margin-top: -100px;
+
+  
+
+}
+.janeiro{
+  width: 550px;
+  margin-left: -190px;
+  margin-top: 50px;
+}
+.china{
+  width: 550px;
+  margin-left:-190px;
+  margin-top: 100px;
+}
+.container{
+  margin-left: 50px;
+ 
+  width: 100%;
+}
+.afro{
+font-size: 40px;
+margin-left: -100px;
+margin-top: 300px;
+text-align: center;
+padding: 50px;
+}
+.desc{
+  padding: 60px;
+  
+  height: 900px;
+  margin-right: -300px;
+  
+}
+#top{
+  font-size: 40px;
+  padding: 50px;
+  margin-bottom: 600px;
+
+}
+.circle{
+  margin-top: 100px;
+  width: 300px;
+  height: 300px;
+  font-size: 35px;
+  margin-left: 290px;
+}
+.par{
+  font-size: 35px;
+margin-right: 10px;
+margin-bottom: 1000px;
+margin-top: 300px;
+width: 600px;
+padding: 50px;
+
+}
+.ctn-1{
+  margin-top: 100px;
+  margin-right: -300px;
+}
+.circle1{
+  margin-left: 100px;
+  margin-top: -500px;
+  width: 400px;
+  height: 400px;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 500px;
+}
+.par1{
+  margin-left: -150px;
+  margin-top: 80px;
+  padding: 50px;
+  margin-right: px;
+  width: 700px;
+  font-size: 40px;
+}
+.book{
+  width: 1100px;
+}
+.prt{
+margin-top: -100px;
+}
+#un{
+  margin-right: -100px;
+  margin-left: 200px;
+  padding-left: 70px;
+  font-size: 40px;
+  width: 600px;
+  
+}
+#deux{
+  margin-top: 40px;
+  margin-left: 200px;
+  margin-right: 40px;
+  padding-left: 70px;
+  font-size: 40px;
+  width: 600px;
+}
+#trois{
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 40px;
+  padding-left: 70px;
+  font-size: 40px;
+  width: 600px;
+}
+svg{
+  margin-bottom: 70px;
+  width: 80px;
+}
+
+.opt{
+  margin-left: 300px;
+  font-size: 45px;
+}
+.opt1{
+  margin-left: 350px;
+  color: rgba(255, 255, 255, 0.447);
+  font-size: 10px;
+  
+}
+.janeiro1{
+  margin-top: -100px;
+  margin-left: 200px;
+  font-size: 15px;
+}
+.janeiro2{
+  margin-left: 230px;
+  color: #ffffff;
+  font-size: 10px;
+}
+.china1{
+  margin-left: 350px;
+  font-size: 15px;
+}
+.chine{
+  font-size: 10px;
+  margin-left: 430px;
+}
+h3{
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.navbar-brand{
+  font-size: 45px;
+}
+.btn{
+  font-size: 25px;
+  padding: 30px;
+  height: 150px;
+  margin-top: 100px;
+}
+.card{
+  font-size: 30px;
+  width: 800px;
+  margin-right: -100px;
+}
+}
+
+/* Large devices (laptops, desktops) */
+
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+    </header>
+    
+    
+        <section id="section1">
+          <p class="frst">Travel around the world and plan all your itineraries with <em>Trek.</em></p>
+          <p style="color:#dfe0bb;margin-left: 50px;" class="add">We help you to plan and navigate all your favorite places around the world. So buckle your belts
+            and get ready for the ride!
+          </p>
+<p></p>
+        
+     
+      <button >Get started></button>
+    </section>
+    <section id="section2">
+     <div class="container">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/images/louvre.avif" class="d-block w-100" alt="..." style="width: 70px;">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Le Grand Louvre</h5>
+              <p>Paris, France</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/Jesus.avif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Christ The Redeemer</h5>
+              <p>Rio De Janeiro, Brazil</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/images/china.avif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>The Great Wall of China</h5>
+              <p>Beijing, China</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+      Destinations description.
+    </button>
+  </p>
+  <div style="min-height: 120px;">
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div class="card card-body" style="width: 300px;">
+        Explore all your favorite places in all corners of the world.Africa, America, Europe and Asia
+        , we reach to all those places.
+      </div>
+    </div>
+  </div>
+    </section>
+    <section id="section3">
+      
+      <div class="desc">
+        <h1 style="margin-left: 100px;">ITINERARIES</h1>
+        <p id="top">Here we have an itinerary plan demo where you can write your plan of the day
+          to visit a particular place. This shows a chronological order of what is to be done.
+          Thus making you more organized, sure and punctual on where you're going.
+          This is more advantageous than the physical one as it can be stored, edited and customized to your liking. Here is a sample of how it may look like:
+        </p>
+        
+      </div>
+    <div class="prt">
+      <div class="circle">
+        Day 1
+      </div>
+      
+    <div class="ctn-1">
+      <div class="par">
+        <p>9:30 am - 11:00 am:<br>
+           11:00 am - 12:30 pm:<br>
+           BREAK<br>
+           13:30 pm - 14:30 pm:<br>
+           14:45 pm - 16:00 pm:
+          </p>
+     
+      </div>
+      <div class="circle1">
+        Day 2
+      </div>
+      <div class="ctn-2">
+        <div class="par1">
+        <p>9:30 am - 11:00 am:<br>
+           11:00 am - 12:30 pm:<br>
+           BREAK<br>
+           13:30 pm - 14:30 pm:<br>
+           14:45 pm - 16:00 pm:</p>
+      </div>
+      </div>
+    </div>
+     
+      
+    </section>
+    <section id="section4">
+      <div class="book">
+      
+        <h1 style="text-align:center;color:white;">BOOKINGS</h1>
+        
+      <div id="un">        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="margin-left:50px;"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f2f2f2" d="M326.7 403.7c-22.1 8-45.9 12.3-70.7 12.3s-48.7-4.4-70.7-12.3c-.3-.1-.5-.2-.8-.3c-30-11-56.8-28.7-78.6-51.4C70 314.6 48 263.9 48 208C48 93.1 141.1 0 256 0S464 93.1 464 208c0 55.9-22 106.6-57.9 144c-1 1-2 2.1-3 3.1c-21.4 21.4-47.4 38.1-76.3 48.6zM256 84c-11 0-20 9-20 20v14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1l0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4V312c0 11 9 20 20 20s20-9 20-20V298.2c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7V104c0-11-9-20-20-20zM48 352H64c19.5 25.9 44 47.7 72.2 64H64v32H256 448V416H375.8c28.2-16.3 52.8-38.1 72.2-64h16c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V400c0-26.5 21.5-48 48-48z"/></svg>
+        <h3 >Economic Class</h3>
+        
+<p>Booking fee: $40<br>
+   Accomodation: $500<br>
+   Food & Entertainment: $400<br>
+   Tansport: $50</p>
+      </div>
+      <div id="deux">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="margin-left:50px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+      
+        <h3 > Business Class</h3>
+        <p class="desc2">Booking fee: $80<br>
+           Accomodation: $1000<br>
+           Food & Entertainment: $600<br>
+           Tansport: $100</p>
+       </div>
+       <div id="trois">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="margin-left:40px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
+        <h3>Master Class</h3>
+          <p class="desc2">Booking fee: $200<br>
+           Accomodation: $3000<br>
+           Food & Entertainment: $1000<br>
+           Tansport: $500</p>
+       </div>
+    </section>
+ </body>
+</html>
